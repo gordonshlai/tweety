@@ -40,7 +40,7 @@
                     </div>
 
                     <div class='lg:flex-1 lg:mx-10' style='max-width: 700px'>
-                        {{ $content }}
+                        {{ $slot }}
                     </div>
 
                     <div class='lg:w-1/6 bg-blue-100 rounded-lg p-4'>
