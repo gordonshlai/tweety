@@ -18,8 +18,9 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/tweets', 'App\Http\Controllers\TweetsController@index')->name('dashboard');
+    Route::get('/tweets', 'App\Http\Controllers\TweetsController@index')->name('home');
     Route::post('/tweets', 'App\Http\Controllers\TweetsController@store');
 });
 
+Route::get('/profiles/{user}', 'App\Http\Controllers\ProfilesController@show')->name('profile');
 require __DIR__ . '/auth.php';
