@@ -20,7 +20,9 @@ Route::get('/', function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('/tweets', 'App\Http\Controllers\TweetsController@index')->name('home');
     Route::post('/tweets', 'App\Http\Controllers\TweetsController@store');
+
     Route::post('/profiles/{user:name}/follow', 'App\Http\Controllers\FollowsController@store');
+    Route::get('/profiles/{user:name}/edit', 'App\Http\Controllers\ProfilesController@edit')->middleware('can:edit, user');
 });
 
 Route::get('/profiles/{user:name}', 'App\Http\Controllers\ProfilesController@show')->name('profile');
