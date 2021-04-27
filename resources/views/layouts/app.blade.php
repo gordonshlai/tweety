@@ -20,7 +20,7 @@
 
 <body class="font-sans antialiased">
     <div class="min-h-screen bg-gray-100">
-        {{-- @include('layouts.navigation') --}}
+        @include('layouts.navigation')
 
         <!-- Page Heading -->
         <section class='px-8 py-4 mb-6'>
